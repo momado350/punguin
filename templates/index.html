@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title >Covid-19 Weekly deaths Predictive Model</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body >
+  <div class="jumbotron text-center" >
+        <h1> Weekly Deaths </h1>
+        <p></p>
+      </div>
+  <div class="container">
+      
+  <table id="covid" class="table table-striped" style="font: ;">
+          <thead>
+            <tr>
+              <th class="thead"><h6>State</h6></th>
+              <th class="thead">Zip Code</th>
+              <th class="thead">cases_weekly</th>
+              <th class="thead">case_rate_weekly</th>
+              <th class="thead">tests_weekly</th>
+              <th class="thead">death_rate_weekly</th>
+              
+            </tr>
+          </thead>
+    <tbody>
+          <form method="POST">
+              <tr>
+              <td >
+                <input id="stateid" type="text" name="state" placeholder="State">
+                
+              </td>
+              <td >
+                <input id="zipcode" type="number" name="zipcode" placeholder="zipcode">
+              </td>
+              <td >
+                <input id="weeklycases" type="number" name="weeklycases" placeholder="#">
+              </td>
+              <td >
+                <input id="weeklycaserate" type="number" name="weeklycaserate" placeholder="#">
+              </td>
+              <td >
+                <input id="weeklytests" type="number" name="weeklytests" placeholder="#">
+              </td>
+              <td >
+                <input id="Weeklydeathrate" type="text" name="weeklydeathrate" placeholder="#">
+              </td>
+              <td >
+                <input type="submit" value="Submit">
+              </td>
+      
+              </tr>
+          </form>    
+        </tbody>
+  </table>
+  <div class="panel-body">
+      <h4>State: {{state}}</h4> <h4>Zipcode: {{zipcode}}</h4><br>
+      <h5>Feature values entered Provided</h5>
+      <p>{{output}}</p>
+  </div>
+  <div class="panel-body">
+      <h4>prediction</h4>
+      <p><h4>{{predictions}}</h4></p>
+  </div>
+  <br><br>
+
+      
+  <footer class="footer" style="text-align: center; background-color: darkslategray;">
+    <span class="bottom">Covid-19 Predictive Model</span>
+  </footer>
+  </div>
+  <br>
+  <br>
+  
+</body>
+
+</html>
